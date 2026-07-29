@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas Market</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>Anas Market</h1>
+    </div>
+    <nav>
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('fr')">Français</button>
+      <button onclick="changeLanguage('ar')">العربية</button>
+      <a class="location-btn" href="https://www.google.com/maps?q=27.14133,-13.16988" target="_blank">Location</a>
+      <button onclick="openCart()">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 id="welcome">Welcome to Anas Market</h2>
+    <p id="description">Your trusted local supermarket</p>
+    <a href="https://www.google.com/maps?q=27.14133,-13.16988" target="_blank">Open location on Google Maps</a>
+  </section>
+
+  <section class="categories">
+    <h2 id="categories-title">Categories</h2>
+    <div class="category-list">
+      <button onclick="showCategory('drinks')">Drinks</button>
+      <button onclick="showCategory('snacks')">Snacks</button>
+      <button onclick="showCategory('food')">Food</button>
+      <button onclick="showCategory('cleaning')">Cleaning</button>
+      <button onclick="showCategory('personal-care')">Personal Care</button>
+      <button onclick="showCategory('dairy')">Dairy</button>
+      <button onclick="showCategory('canned')">Canned Food</button>
+      <button onclick="showCategory('spices')">Spices</button>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <input id="search" type="text" placeholder="Search products..." oninput="searchProducts()">
+    <div id="products"></div>
+  </section>
+
+  <div id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: <span id="total">0</span> DH</h3>
+    <button onclick="sendWhatsApp()">Order by WhatsApp</button>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <div id="floating-cart" class="floating-cart" onclick="openCart()">
+    <span class="fc-icon">Cart</span>
+    <span id="floating-cart-count" class="fc-count">0</span>
+    <span id="floating-cart-total" class="fc-total">0 DH</span>
+  </div>
+
+  <div class="floating-social">
+    <a href="https://wa.me/212624226942" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/anas_market._.68" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@anas_market._.68" target="_blank">TikTok</a>
+    <a href="YOUR_FACEBOOK_LINK" target="_blank">Facebook</a>
+  </div>
+
+  <footer>
+    <h3>Anas Market</h3>
+    <p>Our location</p>
+    <a href="https://www.google.com/maps?q=27.14133,-13.16988" target="_blank">Open Google Maps</a>
+    <div class="social-links">
+      <a href="https://wa.me/212624226942" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/anas_market._.68" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@anas_market._.68" target="_blank">TikTok</a>
+      <a href="YOUR_FACEBOOK_LINK" target="_blank">Facebook</a>
+    </div>
+    <p>© 2026 Anas Market</p>
+  </footer>
+
+  <script src="product.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
